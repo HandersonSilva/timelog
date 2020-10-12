@@ -1,6 +1,6 @@
 ## Sobre a aplicação
 
-Se trata de um Middleware em Laravel que se conecta com endpoints REST descrevendo problemas, componentes, usuários e registros de tempo e apresentar
+Se trata de um Middleware em Laravel que se conecta com endpoints REST descrevendo problemas, componentes, usuários e registros de tempo, de modo a apresentar
 resumos JSON desses dados em um formato compactado.
 
 ### Endpoints de consumo
