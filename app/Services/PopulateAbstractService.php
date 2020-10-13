@@ -13,7 +13,8 @@ class PopulateAbstractService implements PopulateInterface
     protected $repositoryInterface = RepositoryInterface::class;
 
     /**
-     * @inheritDoc
+     * Método que será executado pelas classes filhas
+     * @return mixed|void
      */
     public function execute()
     {
@@ -21,8 +22,9 @@ class PopulateAbstractService implements PopulateInterface
     }
 
     /**
+     * Método responsável por inserir os dados no banco de dados
      * @param $json
-     * @param AbstractRepository $repository
+     * @param $repository
      * @return mixed|void
      */
     function insertInDatabase($json, $repository)

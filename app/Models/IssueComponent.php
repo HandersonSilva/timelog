@@ -18,11 +18,19 @@ class IssueComponent extends Model
         'component_id'
     ];
 
+    /**
+     * Relacionamento com a tabela Issues
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function issue()
     {
         return $this->belongsTo('App\Models\Issue');
     }
 
+    /**
+     * Relacionamento com a tabela components
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function component()
     {
         return $this->belongsTo('App\Models\Component');

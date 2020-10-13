@@ -10,14 +10,20 @@ use GuzzleHttp\Client;
 
 class PopulateComponentsService extends PopulateAbstractService
 {
-
+    /**
+     * Construtor da classe, responsável por fazer as injeções de dependencia
+     * PopulateComponentsService constructor.
+     * @param ComponentRepository $componentsRepository
+     */
     public function __construct(ComponentRepository $componentsRepository)
     {
         $this->repositoryInterface = $componentsRepository;
     }
 
     /**
-     * @inheritDoc
+     * Método que executa a responsabilidade da classe
+     * @return \Exception|mixed|void
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function execute()
     {
@@ -29,7 +35,7 @@ class PopulateComponentsService extends PopulateAbstractService
                 $this->insertInDatabase($jsonResponse, $this->repositoryInterface);
                 return $jsonResponse;
             }else{
-                throw new \Exception('Erro no endpoint de component', 500);
+                throw new \Exception('Erro no service de component', 500);
             }
 
         }catch (\Exception $e){

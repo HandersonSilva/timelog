@@ -11,13 +11,20 @@ use GuzzleHttp\Client;
 
 class PopulateTimeLogsService extends PopulateAbstractService
 {
+    /**
+     * Construtor da classe, responsável por fazer as injeções de dependencia
+     * PopulateTimeLogsService constructor.
+     * @param TimeLogRepository $timeLogRepository
+     */
     public function __construct(TimeLogRepository $timeLogRepository)
     {
         $this->repositoryInterface = $timeLogRepository;
     }
 
     /**
-     * @inheritDoc
+     * Método responsável por executar a responsabilidade da classe
+     * @return \Exception|mixed|void
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function execute()
     {
@@ -29,7 +36,7 @@ class PopulateTimeLogsService extends PopulateAbstractService
                 $this->insertInDatabase($jsonResponse, $this->repositoryInterface);
                 return $jsonResponse;
             }else{
-                throw new \Exception('Erro no endpoint de component', 500);
+                throw new \Exception('Erro no service de timelog', 500);
             }
 
         }catch (\Exception $e){

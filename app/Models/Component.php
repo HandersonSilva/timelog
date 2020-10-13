@@ -17,6 +17,10 @@ class Component extends Model
 
     protected $fillable = ['name'];
 
+    /**
+     * Relacionamento com a tabela de issueComponents
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function issueComponent()
     {
         return $this->hasMany('App\Models\IssueComponent');

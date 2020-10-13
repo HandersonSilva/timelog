@@ -41,6 +41,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * Relacionamento com a tabela TimeLog
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function TimeLogs()
     {
         return $this->hasMany('App\Models\Timelog');

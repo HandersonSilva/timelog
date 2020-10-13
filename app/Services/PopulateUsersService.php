@@ -11,13 +11,20 @@ use Illuminate\Support\Facades\Hash;
 
 class PopulateUsersService extends PopulateAbstractService
 {
+    /**
+     * Construtor da classe, responsável por fazer as injeções de dependencia
+     * PopulateUsersService constructor.
+     * @param UserRepository $userRepository
+     */
     public function __construct(UserRepository $userRepository)
     {
         $this->repositoryInterface = $userRepository;
     }
 
     /**
-     * @inheritDoc
+     * Método responsável por executar a responsabilidade da classe
+     * @return \Exception|mixed|void
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function execute()
     {
@@ -29,7 +36,7 @@ class PopulateUsersService extends PopulateAbstractService
                 $this->insertInDatabase($jsonResponse, $this->repositoryInterface);
                 return $jsonResponse;
             }else{
-                throw new \Exception('Erro no endpoint de component', 500);
+                throw new \Exception('Erro no service de users', 500);
             }
 
         }catch (\Exception $e){
@@ -37,6 +44,12 @@ class PopulateUsersService extends PopulateAbstractService
         }
     }
 
+    /**
+     * Override do método insertInDatabase da classe pai
+     * @param $json
+     * @param $repository
+     * @return mixed|void
+     */
     public function insertInDatabase($json, $repository)
     {
         foreach ($json as $object){

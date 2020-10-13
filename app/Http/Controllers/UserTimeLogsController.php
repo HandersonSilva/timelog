@@ -9,16 +9,20 @@ class UserTimeLogsController extends Controller
 {
     private $getTimeLogByUsersService;
 
+    /**
+     * Construtor da classe, responsável por fazer as injeções de dependencia
+     * UserTimeLogsController constructor.
+     * @param getTimeLogByUsersService $getTimeLogByUsersService
+     */
     public function __construct(getTimeLogByUsersService $getTimeLogByUsersService)
     {
         $this->getTimeLogByUsersService = $getTimeLogByUsersService;
     }
 
     /**
-     * Handle the incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * Método responsável por executar a service e retornar um json
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
      */
     public function __invoke(Request $request)
     {

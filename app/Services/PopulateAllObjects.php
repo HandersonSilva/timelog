@@ -10,6 +10,14 @@ class populateAllObjects
     private $populateUsersService;
     private $populateTimeLogsService;
 
+    /**
+     * Construtor da classe, responsável por fazer as injeções de dependencia
+     * populateAllObjects constructor.
+     * @param PopulateComponentsService $populateComponentsService
+     * @param PopulateIssuesService $populateIssueService
+     * @param PopulateUsersService $populateUsersService
+     * @param PopulateTimeLogsService $populateTimeLogsService
+     */
     public function __construct(
         PopulateComponentsService $populateComponentsService,
         PopulateIssuesService $populateIssueService,
@@ -23,6 +31,10 @@ class populateAllObjects
         $this->populateTimeLogsService = $populateTimeLogsService;
     }
 
+    /**
+     * Método que executa a responsabilidade da classe
+     * @return bool
+     */
     public function execute(){
         try {
             $this->populateComponentsService->execute();

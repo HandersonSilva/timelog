@@ -13,6 +13,12 @@ class getTimeLogByUsersService implements ServicesInterface
     private $timeLogRepository;
     private $userRepository;
 
+    /**
+     * Construtor da classe, responsável por fazer as injeções de dependencia
+     * getTimeLogByUsersService constructor.
+     * @param TimeLogRepository $timeLogRepository
+     * @param UserRepository $userRepository
+     */
     public function __construct(
         TimeLogRepository $timeLogRepository,
         UserRepository $userRepository

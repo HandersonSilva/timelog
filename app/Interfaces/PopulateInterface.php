@@ -11,5 +11,5 @@ interface PopulateInterface extends ServicesInterface
      * @param $json
      * @return mixed
      */
-    function insertInDatabase($json, $reposotitory);
+    public function insertInDatabase($json, $reposotitory);
 }

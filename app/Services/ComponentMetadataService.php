@@ -13,6 +13,12 @@ class ComponentMetadataService implements ServicesInterface
     private $componentRepository;
     private $timeLogRepository;
 
+    /**
+     * Construtor da classe, responsável por fazer as injeções de dependencia
+     * ComponentMetadataService constructor.
+     * @param ComponentRepository $componentRepository
+     * @param TimeLogRepository $timeLogRepository
+     */
     public function __construct(
         ComponentRepository $componentRepository,
         TimeLogRepository $timeLogRepository
@@ -22,6 +28,10 @@ class ComponentMetadataService implements ServicesInterface
         $this->timeLogRepository = $timeLogRepository;
     }
 
+    /**
+     * Método que executa a responsabilidade oferecida pelo service
+     * @return mixed
+     */
     public function execute()
     {
         $components = $this->componentRepository->getAll();
