@@ -51,8 +51,8 @@ Após a execução desse comando será retornada a mensagem "Comando Executado c
 A segunda etapa é o retorno dessas informações de forma reduzida. Para isso foram criados 2 endpoints externos (no bloco api) e internos (no bloco routes).
 
 API externa (Pode ser utilizada pelo navegador para testes):
-localhost:portaDoServidor/api/component-metadata
-localhost:portaDoServidor/api/user-timelogs
+- localhost:portaDoServidor/api/component-metadata
+- localhost:portaDoServidor/api/user-timelogs
 
 As rotas internas são usadas para testes internos usando o comando abaixo:
 
