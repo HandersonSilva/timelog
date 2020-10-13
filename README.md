@@ -18,12 +18,12 @@ O foco dessa aplicação foi a utilização do Laravel 8.0 bem estruturado em cl
 
 Criar um banco de dados postgres com as seguintes comfigurações
 
-**DB_CONNECTION=pgsql**
-**DB_HOST=127.0.0.1**
-**DB_PORT=5433**
-**DB_DATABASE=timelog** 
-**DB_USERNAME=postgres**
-**DB_PASSWORD=postgres**
+- **DB_CONNECTION=pgsql**
+- **DB_HOST=127.0.0.1**
+- **DB_PORT=5433**
+- **DB_DATABASE=timelog** 
+- **DB_USERNAME=postgres**
+- **DB_PASSWORD=postgres**
 
 Fazer clone do projeto e fazer pull do branch master
 
