@@ -27,7 +27,9 @@ Criar um banco de dados postgres com as seguintes comfigurações
 
 Fazer clone do projeto e fazer pull do branch master
 
-Executar o comando composer install na pasta principal do projeto para carregar as dependencias 
+Executar o comando abaixo na pasta principal do projeto para carregar as dependencias 
+
+- **composer install**
 
 Criar um arquivo .env igual o arquivo .env.example
 
