@@ -41,7 +41,7 @@ class PopulateObjects extends Command
         if($populateAllObjects->execute()){
             $this->info('Comando executado com sucesso');
         }else{
-            $this->info('Erro ao executar comando');
+            $this->error('Erro ao executar comando');
         }
 
 
