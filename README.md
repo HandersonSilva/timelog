@@ -33,14 +33,18 @@ Criar um arquivo .env igual o arquivo .env.example
 
 Após isso é necessário rodar o comando para criar as tabelas no banco de dados
 
-**php artisan migrate**
+- **php artisan migrate**
+
+Feito isso, é necessário rodar a aplicação local utilizando o comando
+
+- **php artisan serve --port=suaPortaDePreferência**
 
 ## Modo de utilização
 O projeto é basicamento divido em 2 etapas:
 
 A primeira etapa é o carregamento de informações para preenchimento das tabelas a partir dos endpoints. Para realizar esse processo é necessário rodar o comando abaixo:
 
-**php artisan populate:objects**
+- **php artisan populate:objects**
 
 A segunda etapa é o retorno dessas informações de forma reduzida. Para isso foram criados 2 endpoints externos (no bloco api) e internos (no bloco routes).
 
@@ -50,7 +54,7 @@ localhost:portaDoServidor/api/user-timelogs
 
 As rotas internas são usadas para testes internos usando o comando abaix:
 
-**phpunit tests\Unit\APITest.php**
+- **phpunit tests\Unit\APITest.php**
 
 
 ## Considerações Finais
