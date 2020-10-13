@@ -14,6 +14,10 @@ resumos JSON desses dados em um formato compactado.
 
 O foco dessa aplicação foi a utilização do Laravel 8.0 bem estruturado em classes com responsabilidades unicas PHP 7.4 e banco de dados postgres.  
 
+- **Laravel 8.0**
+- **PHP 7.4**
+- **Postgres**
+
 ## Instalação do sistema no ambiente local
 
 Criar um banco de dados postgres com as seguintes comfigurações
